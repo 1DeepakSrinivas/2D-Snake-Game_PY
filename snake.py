@@ -12,8 +12,8 @@ green = (0, 255, 0)
 blue = (50, 153, 213)
 aqua = (0, 255, 255)
                        
-dis_width = 600
-dis_height = 400
+dis_width = 800
+dis_height = 600
 
 dis = pygame.display.set_mode((dis_width, dis_height))#Makes the display screen
 pygame.display.set_caption('Snake Game')
@@ -24,8 +24,8 @@ snake_block = 20
 food_block = 20
 snake_speed = 10
 
-font_style = pygame.font.SysFont("calibri", 25)
-score_font = pygame.font.SysFont("calibri", 35)
+font_style = pygame.font.SysFont("calibri", 35)
+score_font = pygame.font.SysFont("calibri", 40)
 
 
 def Your_score(score):#displays the score
@@ -40,7 +40,7 @@ def our_snake(snake_block, snake_list):#draws the snake
 
 def message(msg, color):#displays game over message
     mesg = font_style.render(msg, True, color)
-    dis.blit(mesg, [dis_width / 6, dis_height / 3])
+    dis.blit(mesg, [dis_width / 6, dis_height / 2.4])
 
 
 def gameLoop():#initializes the game
@@ -104,8 +104,8 @@ def gameLoop():#initializes the game
         snake_List.append(snake_Head)
         if len(snake_List) > Length_of_snake:
             del snake_List[0]
-
-        for x in snake_List[99:0]:
+                
+        for x in snake_List[0:-1]:
             if x == snake_Head:
                 game_close = True
 
