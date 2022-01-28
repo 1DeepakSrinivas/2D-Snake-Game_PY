@@ -12,8 +12,8 @@ green = (0, 255, 0)
 blue = (50, 153, 213)
 aqua = (0, 255, 255)
                        
-dis_width = 800
-dis_height = 600
+dis_width = 1280
+dis_height = 720
 
 dis = pygame.display.set_mode((dis_width, dis_height))#Makes the display screen
 pygame.display.set_caption('Snake Game')
