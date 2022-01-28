@@ -20,11 +20,10 @@ font=pygame.font.SysFont('Corbel', 35)
 text = smallfont.render('Start', True, color)
 
 #strings for rules
-rules_l1= str("Welcome To 2D Snake Game")
-rules_l2=str("Rules:")
-rules3=str("Don't go to the edge of the Screen")
-rules4=str("Collect food to increase score and make your snake grow")
-rules5=str("Don't hit yourself")
+rules_l1= smallfont.render("Welcome to 2D Snake Game",True,white)
+rules_l2=smallfont.render("Rules:",True,white)
+rules3=smallfont.render("⨀ Don't go outside the Screen",True,white)
+rules5=smallfont.render("⨀ Don't collide into yourself",True,white)
 
 
 while True:
@@ -41,4 +40,8 @@ while True:
     else:
         pygame.draw.rect(screen, color_dark, [585, height / 2, 140, 40])
     screen.blit(text, (620,height/2))
+    screen.blit(rules_l1, (450, 100))
+    screen.blit(rules_l2, (600, 200))
+    screen.blit(rules3, (450, 250))
+    screen.blit(rules5, (450, 300))
     pygame.display.update()
