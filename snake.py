@@ -40,7 +40,7 @@ def our_snake(snake_block, snake_list):#draws the snake
 
 def message(msg, color):#displays game over message
     mesg = font_style.render(msg, True, color)
-    dis.blit(mesg, [dis_width / 6, dis_height / 2.4])
+    dis.blit(mesg, [370, 350])
 
 
 def gameLoop():#initializes the game
