@@ -30,12 +30,12 @@ while True:
     for ev in pygame.event.get():
         if ev.type == pygame.QUIT:
             pygame.quit()
-        if ev.type == pygame.MOUSEBUTTONDOWN:
+        if ev.type == pygame.MOUSEBUTTONDOWN: # To register start button click
             if width / 2 <= mouse[0] <= width / 2 + 140 and height / 2 <= mouse[1] <= height / 2 + 40:
                 import snake
     screen.fill((60, 25, 60))
     mouse = pygame.mouse.get_pos()
-    if width/2<= mouse[0] <= 620+140 and height/2<= mouse[1] <= height / 2 + 40:
+    if width/2<= mouse[0] <= 620+140 and height/2<= mouse[1] <= height / 2 + 40: # to change colour of button when hovering
         pygame.draw.rect(screen, color_light, [585, height/2, 140, 40])
     else:
         pygame.draw.rect(screen, color_dark, [585, height / 2, 140, 40])
