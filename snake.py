@@ -105,7 +105,7 @@ def gameLoop():#initializes the game
         if len(snake_List) > Length_of_snake:
             del snake_List[0]
                 
-        for x in snake_List[0:-1]:
+        for x in snake_List[0:-1]:#to check for head's collision with the rest of the body
             if x == snake_Head:
                 game_close = True
 
